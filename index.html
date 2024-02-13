@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Personal Portfolio Website using HTML and CSS | Codehal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo"><span>ARPITHA</span> GOWDA</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#lets-talk" class="btn-talk">Let's Talk</a>
+      
+
+    </header>
+
+    <section class="home">
+        <div class="content">
+            <h2>Hi, I'm <span>Arpitha</span></h2>
+            <h4>Frontend Developer</h4>
+            <p>"Dedicated to crafting intuitive and visually compelling user interfaces. Committed to delivering seamless digital experiences through a blend of design expertise and technical proficiency."</p>
+            <div class="btn-group">
+               
+                <a href="https://github.com/arpithagowda67?tab=repositories">See Projects</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://in.linkedin.com/in/arpitha-gowda-20001996as"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/arpithagowda67"><i class="fa-brands fa-github"></i></a>
+             
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>As a seasoned QA Analyst with a robust background in ensuring software quality, I leverage extensive experience in meticulous testing methodologies. Presently pursuing my MCA, I am committed to honing my skills at the intersection of software testing and advanced computing. My journey involves maintaining a high standard of quality assurance while embracing ongoing learning to contribute effectively to software development lifecycles.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="content">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for any inquiries or collaboration opportunities. I'm always open to connecting!</p>
+        <div class="contact-info">
+            <p>Email: arpithagowda028@gmail.com</p>
+            <p>Phone: +91 8546994129</p>
+        </div>
+    </div>
+</section>
+
+<!-- Let's Talk Section -->
+<section id="lets-talk" class="lets-talk">
+    <div class="content">
+        <h2>Let's Talk</h2>
+        <p>Initiate a conversation or inquire about anything. I'm here to listen and discuss!</p>
+        <div class="contact-form">
+            <!-- Add your contact form HTML here -->
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="button" onclick="sendMessage()">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+function sendMessage() {
+    // Get form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Validate form data (you can add more sophisticated validation)
+    if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // Perform your desired action with the form data
+    // For example, you can send an HTTP request or log the data to the console
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
+
+    // Optionally, reset the form after submission
+    document.getElementById('contactForm').reset();
+
+    // You can add more advanced logic here, such as sending data to a server
+    // using XMLHttpRequest, Fetch API, or a third-party library.
+}
+</script>
+
+
+
+
+</body>
+
+</html>
